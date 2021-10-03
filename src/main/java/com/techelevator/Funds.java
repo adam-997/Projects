@@ -22,7 +22,7 @@ public class Funds
     {
 
         int comparison = this.balance.compareTo(amount);
-        return comparison >= 0 ? true : false;
+        return comparison >= 0;
 
     }
 
@@ -37,7 +37,7 @@ public class Funds
     {
 
         int [] changeArr = new int[3];
-        int numOfQuarters, numOfDimes, numOfNickels = 0;
+        int numOfQuarters, numOfDimes, numOfNickels;
         int balanceCents = this.balance.multiply(new BigDecimal(100)).setScale(2, RoundingMode.HALF_UP).intValueExact();
 
         numOfQuarters = balanceCents/25;
